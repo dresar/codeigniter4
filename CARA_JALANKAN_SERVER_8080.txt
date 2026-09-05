@@ -1,0 +1,93 @@
+========================================
+   CARA JALANKAN SERVER DI PORT 8080
+========================================
+
+METODE 1: Menggunakan File Batch (PALING MUDAH)
+-----------------------------------------------
+1. Double-click file: START_SERVER_8080.bat
+2. Terminal akan terbuka dan server langsung jalan
+3. Buka browser: http://localhost:8080
+
+METODE 2: Menggunakan Terminal
+-----------------------------------------------
+1. Buka Terminal/PowerShell
+2. Masuk ke folder project
+3. Jalankan:
+   php spark serve --port=8080
+
+   ATAU
+
+   php spark serve --host=127.0.0.1 --port=8080
+
+4. JANGAN TUTUP terminal ini!
+5. Buka browser: http://localhost:8080
+
+========================================
+URL YANG BISA DIAKSES:
+========================================
+
+Frontend:
+- http://localhost:8080/
+- http://localhost:8080/portfolio
+- http://localhost:8080/blog
+
+Admin Login:
+- http://localhost:8080/auth/login
+
+Debug Page (untuk troubleshooting):
+- http://localhost:8080/debug/login
+
+Admin Dashboard (setelah login):
+- http://localhost:8080/admin/dashboard
+
+========================================
+TROUBLESHOOTING:
+========================================
+
+❌ Error: "This site can't be reached"
+   Solusi:
+   1. Pastikan server benar-benar berjalan
+   2. Cek di terminal apakah ada error
+   3. Coba akses: http://127.0.0.1:8080
+   4. Jalankan: php check_server.php
+
+❌ Error: "Connection Refused"
+   Solusi:
+   1. Pastikan server berjalan di port 8080
+   2. Cek apakah port 8080 sudah digunakan aplikasi lain
+   3. Restart server
+
+❌ Login selalu gagal
+   Solusi:
+   1. Buka halaman debug: http://localhost:8080/debug/login
+   2. Cek semua test yang ditampilkan
+   3. Cek log file di: writable/logs/
+   4. Gunakan tombol "Demo Login" di halaman login
+
+========================================
+CARA LOGIN:
+========================================
+
+1. Buka: http://localhost:8080/auth/login
+2. Klik tombol "Demo Login (Auto Fill & Submit)"
+3. Atau isi manual:
+   - Username: admin
+   - Password: admin123
+
+========================================
+CATATAN PENTING:
+========================================
+
+⚠️ JANGAN TUTUP TERMINAL saat server berjalan!
+   Server akan berhenti jika terminal ditutup.
+
+✅ Untuk menghentikan server:
+   - Tekan CTRL+C di terminal
+
+✅ Base URL sudah diupdate ke port 8080
+
+✅ Jika masih error, cek halaman debug:
+   http://localhost:8080/debug/login
+
+========================================
+
